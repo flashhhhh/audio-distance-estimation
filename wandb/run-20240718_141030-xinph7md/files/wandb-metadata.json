@@ -1,0 +1,100 @@
+{
+    "os": "Linux-6.5.0-41-generic-x86_64-with-glibc2.35",
+    "python": "3.10.12",
+    "heartbeatAt": "2024-07-18T07:10:31.557638",
+    "startedAt": "2024-07-18T07:10:30.062366",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "/home/flash/audio-distance-estimation/training_synthetic.py",
+    "codePathLocal": "training_synthetic.py",
+    "codePath": "training_synthetic.py",
+    "git": {
+        "remote": "https://github.com/michaelneri/audio-distance-estimation",
+        "commit": "c39849d8a5eb88ece8512a8c4daf8b2cf2b8f520"
+    },
+    "email": "nguyenchithanhpro196@gmail.com",
+    "root": "/home/flash/audio-distance-estimation",
+    "host": "flash-GF63-Thin-10SC",
+    "username": "flash",
+    "executable": "/usr/bin/python3",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 1739.3606666666665,
+        "min": 800.0,
+        "max": 5000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 3963.115,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 1802.65,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 3584.566,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 3600.749,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 3601.089,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 3689.543,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 3583.661,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 5000.0
+        },
+        {
+            "current": 800.0,
+            "min": 800.0,
+            "max": 5000.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 54.701019287109375,
+            "used": 34.70273208618164
+        }
+    },
+    "memory": {
+        "total": 7.566505432128906
+    }
+}

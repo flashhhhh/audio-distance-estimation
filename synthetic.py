@@ -26,10 +26,19 @@ class SyntheticDataset(Dataset):
         # Read distances
         self.distances = loadmat(distances_file)['dist_s2r'].squeeze()
         if permutation is not None:
-            self.permutation = loadmat(permutation)['transformed_indeces'] - 1 # From matlab to python
+            self.permutation = loadmat(permutation)['random_indeces'] - 1 # From matlab to python
             self.permutation = self.permutation.squeeze()
         # Select corresponding audios
         list_all_files = [f for f in listdir(file_path) if isfile(join(file_path, f))]
+
+        order = self.permutation
+        np.sort(order)
+
+        for i in range(len(self.permutation)):
+            self.permutation[i] = np.where(order == self.permutation[i])[0][0]
+
+        print(f"Max perm: {max(self.permutation)}")
+
         if permutation:
             list_all_files = [list_all_files[i] for i in self.permutation.tolist()]
             self.distances = self.distances[self.permutation]

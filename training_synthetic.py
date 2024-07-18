@@ -1,3 +1,6 @@
+import os
+os.chdir('/content/audio-distance-estimation')
+
 from pytorch_lightning import Trainer
 from pytorch_lightning.loggers import WandbLogger
 from datetime import datetime
@@ -8,9 +11,9 @@ import pandas as pd
 
 if __name__ == "__main__":
     # PATHS
-    file_path = "dataset_wav/"
+    file_path = "dataset_wav/dataset_wav"
     distance_files = "dataset_wav/distances.mat"
-    permutation = "dataset_wav/transformed_indeces.mat"
+    permutation = "dataset_wav/indeces_permuted.mat"
     pathNoisesTraining = "noise_dataset/training_noise"
     pathNoisesVal = "noise_dataset/val_noise"
     pathNoisesTest = "noise_dataset/test_noise"
@@ -47,8 +50,8 @@ if __name__ == "__main__":
                     foldTraining.remove(foldValidation)
                     foldTraining.remove(foldTest)  
                     trainer = Trainer(
-                            accelerator="gpu",
-                            gpus = 1,
+                            # accelerator="gpu",
+                            # gpus = 1,
                             log_every_n_steps=50,
                             max_epochs=config["max_epochs"],
                             precision=32,
